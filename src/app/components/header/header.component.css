@@ -1,0 +1,147 @@
+@import url("../../../assets/css/logo.css");
+@import url("../../../assets/css/form2.css");
+
+a {
+    color: var(--text-color);
+}
+
+.espacio {
+    height: 70px;
+}
+
+section {
+    height: 60px;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.header {
+    background-color: var(--second-background);
+    color: var(--text-color);
+    width: 100%;
+}
+
+.header-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    width: 95%;
+    max-width: var(--tamano-maximo);
+    position: relative;
+}
+
+/* izquierda */
+
+.izquierda {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.paginas-lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* Derecha */
+
+.derecha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.derecha > * {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.iconos {
+    gap: 10px;
+}
+
+.user {
+    gap: 5px;
+}
+
+#noMobileHeader {
+    display: none;
+}
+
+#username {
+    display: none;
+}
+
+#iconos-auth {
+    display: none;
+}
+
+#loginActions {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+button {
+    border-radius: 5px;
+    margin: 0;
+    height: 40px;
+}
+
+#loginActions button:first-child {
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+}
+
+li {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+    #mobileHeader {
+        display: none;
+    }
+
+    #noMobileHeader {
+        display: flex;
+    }
+
+    #iconos-auth {
+        display: contents;
+    }
+
+    #loginActions {
+        display: flex;
+    }
+
+    #logoMobile {
+        display: none;
+    }
+
+    #menu_burger {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .izquierda {
+        display: flex;
+    }
+
+    #username {
+        display: block;
+    }
+}

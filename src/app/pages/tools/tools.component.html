@@ -1,0 +1,27 @@
+<section class="tools">
+    <h1>Tools</h1>
+    <hr />
+
+    <ul class="tools-layout">
+        <li *ngFor="let tool of tools" class="tool-card1">
+            <div class="tool-card">
+                <div class="header-card">
+                    <img src="{{ tool?.pathImage }}" alt="" />
+
+                    <div class="name-role">
+                        <h2>{{ tool?.name }}</h2>
+                        <span>{{ tool?.version }}</span>
+                    </div>
+                </div>
+
+                <div class="description-card">
+                    <p>
+                        {{ tool?.desc }}
+                    </p>
+                </div>
+
+                <div class="footer-card"></div>
+            </div>
+        </li>
+    </ul>
+</section>

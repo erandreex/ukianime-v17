@@ -1,0 +1,135 @@
+.espacio {
+    height: 55px;
+}
+
+p {
+    font-size: var(--text-size);
+}
+
+h3 {
+    font-size: var(--category-size);
+}
+
+a {
+    font-size: var(--name-size);
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: var(--category-size);
+    color: var(--text-color);
+}
+
+/* ----- Footer ----- */
+
+.contenido_del_footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--third-background);
+    color: var(--text-color);
+}
+
+.layout-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1%;
+    width: 100%;
+    max-width: var(--tamano-maximo);
+    margin: auto;
+
+    flex-wrap: nowrap;
+    gap: 5%;
+}
+
+.p1-description {
+    text-align: justify;
+}
+
+.p2-paginas {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-paginas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.lista-paginas > * {
+    width: 100%;
+}
+
+.p3-creadores {
+    text-align: justify;
+    white-space: nowrap;
+}
+
+.kitsu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.kitsuimg {
+    width: 50px;
+    height: 50px;
+}
+
+/* Second Footer */
+
+.barra {
+    background-color: var(--four-background);
+}
+
+.contenidoBarra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    max-width: var(--tamano-maximo);
+}
+
+.contenidoBarra > * {
+    width: 100%;
+}
+
+@media screen and (min-width: 550px) {
+    .layout-footer {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5%;
+        width: 80%;
+    }
+    .layout-footer > * {
+        width: calc(90% / 3);
+    }
+
+    .barra {
+        padding: 15px;
+    }
+
+    .contenidoBarra > * {
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    .espacio {
+        height: 0px;
+        display: none;
+    }
+
+    .kitsu {
+        justify-content: center;
+    }
+}

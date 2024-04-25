@@ -1,0 +1,27 @@
+<figure class="card" [style.height]="height" [style.width]="width">
+    <img
+        #lImage
+        [src]="anime?.attributes?.posterImage?.medium"
+        [alt]="anime?.attributes?.canonicalTitle"
+        onerror="this.src='../../../../assets/imagen-no-disponible.jpg'"
+        routerLink="/anime/{{ anime?.id }}"
+        [hidden]="!viewImage"
+        (load)="load()"
+    />
+
+    <div class="loader" alt="prueba" [hidden]="viewImage"></div>
+
+    <figcaption class="aquiesasi">
+        <div class="footer-info" routerLink="/anime/{{ anime?.id }}">
+            <h3>{{ anime?.attributes?.canonicalTitle }}</h3>
+
+            <div class="rating">
+                <i class="fa fa-star" [class.start-active]="averageRating >= 20"></i>
+                <i class="fa fa-star" [class.start-active]="averageRating >= 40"></i>
+                <i class="fa fa-star" [class.start-active]="averageRating >= 60"></i>
+                <i class="fa fa-star" [class.start-active]="averageRating >= 80"></i>
+                <i class="fa fa-star" [class.start-active]="averageRating >= 95"></i>
+            </div>
+        </div>
+    </figcaption>
+</figure>

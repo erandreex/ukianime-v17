@@ -1,0 +1,53 @@
+<div class="custom-list">
+    <div class="size-select">
+        <span>Font Size</span>
+        <ul class="sizes">
+            <li
+                *ngFor="let size of allStyles!.size"
+                (click)="selectStyle('size', size)"
+                [class]="size"
+                [class.active]="optionsSelected['size'] == size"
+            >
+                {{ size | split }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="theme-select">
+        <span>Theme</span>
+
+        <ul class="theme">
+            <li
+                *ngFor="let theme of allStyles?.theme"
+                (click)="selectStyle('theme', theme)"
+                [class]="theme"
+                [class.active]="optionsSelected['theme'] == theme"
+            ></li>
+        </ul>
+    </div>
+
+    <div class="color-select">
+        <span>Color</span>
+
+        <ul class="colors">
+            <li
+                *ngFor="let color of allStyles?.color"
+                (click)="selectStyle('color', color)"
+                [class]="color"
+                [class.active]="optionsSelected['color'] == color"
+            ></li>
+        </ul>
+    </div>
+
+    <div class="image-select">
+        <span>Background</span>
+        <ul class="images">
+            <li
+                *ngFor="let image of allStyles!.image"
+                (click)="selectStyle('image', image)"
+                [class]="image"
+                [class.active]="optionsSelected['image'] == image"
+            ></li>
+        </ul>
+    </div>
+</div>

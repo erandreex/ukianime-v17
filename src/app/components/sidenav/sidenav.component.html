@@ -1,0 +1,14 @@
+<div id="mySidenav" class="sidenav" [style.width]="sizeOpen">
+    <i class="closebtn fa-solid fa-xmark" (click)="action('cerrar')"></i>
+    <ul class="links">
+        <li *ngFor="let ruta of rutas">
+            <a routerLink="/{{ ruta.path }}">{{ ruta.name }}</a>
+        </li>
+    </ul>
+
+    <hr />
+
+    <app-modal-customizes></app-modal-customizes>
+</div>
+
+<div class="todooscuro" [class.mostrarBG]="backgroundO" (click)="action('cerrar')"></div>

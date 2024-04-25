@@ -1,0 +1,125 @@
+@import url("../../../assets/css/loader.css");
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px 0px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.carousel-layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Botones */
+
+button {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.svgd {
+    width: 25px;
+    color: white;
+}
+
+/* Slider */
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+.slider-inner {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    height: 100%;
+    width: max-content;
+    overflow-x: auto;
+    left: 0.1px;
+    transition: all 0.5s ease;
+    margin: 0;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card - Slider */
+
+.slide-card {
+    transition: 250ms ease-out;
+}
+
+.slide-card:hover {
+    margin: 0 20px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.slide-card:last-child:hover {
+    margin: 0%;
+}
+
+@media screen and (min-width: 650px) {
+    .titulo-categoria {
+        margin-left: calc(25px + 6px + 6px);
+    }
+
+    .carousel {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .slideBtn {
+        display: block;
+        color: aqua;
+    }
+}
+
+.paracargar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.loader {
+    border-width: 16px;
+    border-top-width: 16px;
+    width: 120px;
+    height: 120px;
+}
+
+.mensajeError {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-size);
+}

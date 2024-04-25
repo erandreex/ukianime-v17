@@ -1,0 +1,14 @@
+<form [formGroup]="searchForm" (ngSubmit)="buscar()">
+    <input type="text" #input formControlName="text" class="input" required="" autofocus />
+</form>
+
+<hr />
+<ul class="favoritos-layout" *ngIf="!mostrar">
+    <li *ngFor="let anime of animes">
+        <app-anime-card [anime]="anime" [ranking]="anime.attributes.averageRating"></app-anime-card>
+    </li>
+</ul>
+
+<div *ngIf="mostrar" class="not-found">
+    <h2>No anime found for the search: {{ termino }}</h2>
+</div>

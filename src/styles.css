@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+/* ---------- Fuentes ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shojumaru&display=swap");
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+}
+
+/* ---------- Estilos de texto ---------- */
+
+:root {
+    /* Breakpoints */
+    --min-medium: 650px;
+    --tamano-maximo: 1200px;
+    --width-ideal: 900px;
+
+    /* Border Radius */
+    --border-radius: 5px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+hr {
+    background: grey;
+    height: 1px;
+    border: 0px;
+}
+
+/* ---------- Secciones ---------- */
+
+.fondo {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+/* ---------- Scrollbar ---------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(68, 66, 66);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(68, 66, 66);
+}

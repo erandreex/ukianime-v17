@@ -1,0 +1,38 @@
+<div class="espacio"></div>
+<section class="header">
+    <ul id="mobileHeader" class="header-layout">
+        <li id="back" (click)="back()">
+            <i class="fa-solid fa-angle-left fa-lg"></i>
+        </li>
+
+        <li id="logoMobile" routerLink="/" class="logo">
+            <img src="../../../assets/ukianime-logo.png" class="logo-img" />
+            <span class="titulo">Ukianime</span>
+        </li>
+
+        <li id="menu_burger" (click)="sidenav('abrir')">
+            <i class="fa-solid fa-bars fa-lg"></i>
+        </li>
+    </ul>
+
+    <ul id="noMobileHeader" class="header-layout">
+        <li class="izquierda">
+            <div class="logo" routerLink="/">
+                <img src="../../../assets/ukianime-logo.png" class="logo-img" />
+                <span class="titulo">Ukianime</span>
+            </div>
+        </li>
+
+        <li class="derecha">
+            <ul *ngFor="let ruta of rutas" class="paginas-lista">
+                <li>
+                    <a routerLink="/{{ ruta.path }}">{{ ruta.name }}</a>
+                </li>
+            </ul>
+
+            <ul class="iconos">
+                <li><i (click)="sidenav('abrir')" class="fa-solid fa-gear fa-lg"></i></li>
+            </ul>
+        </li>
+    </ul>
+</section>

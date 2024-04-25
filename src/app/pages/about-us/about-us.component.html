@@ -1,0 +1,27 @@
+<section class="nosotros">
+    <h1>Team Work</h1>
+    <hr />
+
+    <ul class="owners-layout">
+        <li *ngFor="let owner of owners" class="o-card">
+            <div class="owner-card">
+                <div class="header-card">
+                    <img src="{{ owner?.pathImage }}" alt="" />
+
+                    <div class="name-role">
+                        <h3>{{ owner?.name }}</h3>
+                        <h4>{{ owner?.role }}</h4>
+                    </div>
+                </div>
+
+                <div class="description-card">
+                    <p>
+                        {{ owner?.desc }}
+                    </p>
+                </div>
+
+                <div class="footer-card"></div>
+            </div>
+        </li>
+    </ul>
+</section>

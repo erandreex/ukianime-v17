@@ -1,0 +1,39 @@
+@import url("../assets/css/estilos.css");
+@import url("../assets/css/loader.css");
+
+main {
+    width: 98%;
+    margin: 0px auto;
+    max-width: var(--tamano-maximo);
+    min-height: 90vh;
+}
+
+.fondo {
+    background-color: var(--main-background);
+    background-image: var(--imagen-ola);
+}
+
+.fondo-solid {
+    background-color: var(--main-background);
+}
+
+/* Loader */
+
+.paracargar {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border-width: 16px;
+    border-top-width: 16px;
+    width: 120px;
+    height: 120px;
+}
+
+.espacio {
+    min-height: 90vh;
+}

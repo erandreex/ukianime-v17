@@ -1,0 +1,128 @@
+/* @import url("../../../../assets/css/estilos.css"); */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.permitir-scroll {
+    height: max-content;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+/* Lista customizable */
+
+.custom-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+.custom-list > * {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 8px 8px 32px;
+    width: 250px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 5%;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--theme-color-border);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+li.active {
+    border: 3px solid var(--theme-color-select);
+}
+
+/* size-select */
+
+.sizes .size_small {
+    font-size: 12px;
+}
+
+.sizes .size_normal {
+    font-size: 14px;
+}
+
+.sizes .size_large {
+    font-size: 16px;
+}
+
+.sizes .size_xlarge {
+    font-size: 18px;
+}
+
+/* Temas */
+
+.theme_day {
+    background-color: white;
+}
+
+.theme_night {
+    background-color: rgb(61, 61, 61);
+}
+
+.theme_navy {
+    background-color: rgb(11, 0, 51);
+}
+
+/* Colores */
+
+.color_red {
+    background-color: #a10036;
+}
+
+.color_blue {
+    background-color: #0073a1;
+}
+
+.color_orange {
+    background-color: #f1612c;
+}
+
+.color_green {
+    background-color: #36a100;
+}
+
+.color_purple {
+    background-color: #71005b;
+}
+
+/* Imagen de fondo */
+
+.images .image_day {
+    background-color: rgb(255, 255, 255);
+}
+
+.images .image_night {
+    background-color: rgb(45, 45, 45);
+}
+
+@media screen and (min-width: 650px) {
+    ul {
+        gap: 20px;
+    }
+}
